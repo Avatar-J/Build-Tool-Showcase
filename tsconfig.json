@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./public/js",
+    "rootDir": "./src",
+    "target": "es6",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
