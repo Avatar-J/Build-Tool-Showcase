@@ -1,0 +1,38 @@
+@use "variables";
+@use "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include mixins.centerPosition;
+  min-height: 100vh;
+}
+
+.wrapper {
+  min-height: 600px;
+  width: 600px;
+  padding: 20px;
+  background-color: variables.$primary-color;
+}
+
+header {
+  @include mixins.spaceBetween;
+  width: 100%;
+  min-height: 80px;
+}
+
+.icon-container {
+  @include mixins.centerPosition;
+  //   width: 80px;
+  height: 100%;
+  background-color: variables.$background-color;
+}
+
+.icon {
+  width: 40px;
+  min-height: 40px;
+}

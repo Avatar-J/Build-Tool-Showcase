@@ -1,7 +1,25 @@
-const fname: string = "jummai";
+import "./style.scss";
+import * as packageJson from "../package.json";
 
-console.log(`Hi! I am Jummai ${fname}`);
+const mainContainer = document.getElementById("mainContainer");
 
-const para = document.createElement("p");
-para.innerHTML = "show me the way senior developer";
-document.body.appendChild(para);
+console.log(packageJson.devDependencies);
+
+function createListElement(data: string, element: HTMLElement) {
+  const list = document.createElement("li");
+  list.textContent = data;
+
+  if (list) {
+    element.appendChild(list);
+  }
+}
+
+function displayTools(data: { [key: string]: string }, element: HTMLElement) {
+  const toolName = Object.keys(data);
+
+  toolName.forEach((tool) => {
+    createListElement(tool, element);
+  });
+}
+
+displayTools(packageJson.devDependencies, mainContainer as HTMLElement);
