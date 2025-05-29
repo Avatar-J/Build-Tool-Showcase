@@ -1,17 +1,38 @@
 {
   "tools": [
     {
-      "name": "ts-loader",
-      "description": "A Webpack loader that uses TypeScript's compiler to transpile .ts and .tsx files."
+      "name": "webpack",
+      "description": "A module bundler for JavaScript, allowing you to bundle and optimize JS, CSS, assets, etc."
     },
     {
       "name": "typescript",
       "description": "A typed superset of JavaScript that compiles to plain JavaScript."
     },
     {
-      "name": "webpack",
-      "description": "A module bundler for JavaScript, allowing you to bundle and optimize JS, CSS, assets, etc."
+      "name": "sass",
+      "description": "A preprocessor that compiles .scss/.sass into CSS."
     },
+    {
+      "name": "jest",
+      "description": "A JavaScript testing framework by Facebook, often used with React and Node apps."
+    },
+    {
+      "name": "ESLint",
+      "description": "A pluggable linting utility for JavaScript and JSX to help find and fix problems in code."
+    },
+    {
+      "name": "Babel",
+      "description": "A JavaScript compiler that transforms modern JavaScript into backward-compatible versions."
+    },
+    {
+      "name": "Prettier",
+      "description": "An opinionated code formatter for JavaScript, TypeScript, and many other languages."
+    },
+    {
+      "name": "Husky",
+      "description": "Helps manage Git hooks like pre-commit and pre-push to automate tasks."
+    },
+
     {
       "name": "webpack-cli",
       "description": "Command line interface for running Webpack."
@@ -25,13 +46,14 @@
       "description": "Injects CSS into the DOM via <style> tags during development."
     },
     {
+      "name": "ts-loader",
+      "description": "A Webpack loader that uses TypeScript's compiler to transpile .ts and .tsx files."
+    },
+    {
       "name": "css-loader",
       "description": "Resolves @import and url() in CSS files. Required by style-loader."
     },
-    {
-      "name": "sass",
-      "description": "A preprocessor that compiles .scss/.sass into CSS."
-    },
+
     {
       "name": "sass-loader",
       "description": "A Webpack loader that compiles Sass/SCSS files into CSS."
@@ -40,10 +62,7 @@
       "name": "prettier",
       "description": "An opinionated code formatter to ensure consistent code style."
     },
-    {
-      "name": "jest",
-      "description": "A JavaScript testing framework by Facebook, often used with React and Node apps."
-    },
+
     {
       "name": "ts-jest",
       "description": "A Jest transformer that allows Jest to understand TypeScript."

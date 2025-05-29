@@ -20,9 +20,6 @@ body {
   min-height: 100%;
   width: 100%;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   color: variables.$lg-font-color;
 
   @include mixins.breakpoint(768px) {
@@ -105,11 +102,15 @@ section {
   margin-top: 20px;
 
   @include mixins.breakpoint(768px) {
-    width: 100%;
+    width: 768px;
+  }
+
+  @include mixins.breakpoint(600px) {
+    width: 600px;
   }
 
   @include mixins.breakpoint(480px) {
-    width: 100%;
+    width: 480px;
   }
 }
 
@@ -123,10 +124,34 @@ section {
   border: 1px solid black;
   width: 250px;
   height: 200px;
-}
-// .darkTheme .tool-container {
-// }
+  @include mixins.spaceBetween;
+  gap: variables.$base-padding;
 
+  @include mixins.breakpoint(768px) {
+    width: 320px;
+  }
+
+  @include mixins.breakpoint(600px) {
+    width: 100%;
+  }
+  @include mixins.breakpoint(480px) {
+    width: 100%;
+  }
+}
+.tool-container:hover {
+  background-color: variables.$lg-bg-font-color;
+  color: variables.$lg-background-color;
+  transform: translateY(-5px);
+}
+.info {
+  @include mixins.spaceBetween;
+  flex-direction: column;
+  text-align: center;
+}
+.toolNumber {
+  font-size: 70px;
+  font-weight: bolder;
+}
 .tool-container h2 {
   margin-bottom: 0.5rem;
 }

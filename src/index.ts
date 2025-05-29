@@ -10,8 +10,9 @@ export function displayTools(
   data: { tools: { name: string; description: string }[] },
   element: HTMLElement
 ) {
-  data.tools.forEach((tool) => {
-    createToolElement(tool, element);
+  data.tools.forEach((tool, index) => {
+    const newIndex: number = index + 1;
+    createToolElement(tool, element, newIndex);
   });
 }
 
