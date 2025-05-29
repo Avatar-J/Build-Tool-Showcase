@@ -11,6 +11,7 @@ body {
   @include mixins.displayColumn;
   min-height: 100vh;
   background-color: variables.$lg-theme-bg;
+  position: relative;
 }
 
 .darkTheme {
@@ -90,6 +91,7 @@ header {
 main {
   @include mixins.centerPosition;
   width: 100%;
+  margin-bottom: variables.$base-margin;
 }
 section {
   padding: variables.$base-padding;
@@ -127,11 +129,16 @@ section {
   @include mixins.spaceBetween;
   gap: variables.$base-padding;
 
+  @include mixins.breakpoint(900px) {
+    width: 350px;
+  }
   @include mixins.breakpoint(768px) {
     width: 320px;
   }
-
-  @include mixins.breakpoint(600px) {
+  @include mixins.breakpoint(700px) {
+    width: 280px;
+  }
+  @include mixins.breakpoint(610px) {
     width: 100%;
   }
   @include mixins.breakpoint(480px) {
@@ -157,9 +164,11 @@ section {
 }
 footer {
   @include mixins.centerPosition;
-
   background-color: variables.$lg-background-color;
   padding: variables.$base-padding;
   font-size: variables.$header-font-size-md;
   color: variables.$lg-font-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
