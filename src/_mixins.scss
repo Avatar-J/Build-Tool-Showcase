@@ -9,3 +9,14 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin displayColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
