@@ -16,7 +16,7 @@ A simple web app demonstrating modern build tools, written in TypeScript and SCS
 
 ### Prerequisites
 
-- Node.js (v16+ recommended)
+- Node.js
 - npm
 
 ### Installation
@@ -53,7 +53,7 @@ npm test
 - `jest.config.ts` — Jest configuration
 - `babel.config.js` — Babel configuration
 
-## License
+
 
 ISC
 
