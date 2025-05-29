@@ -61,7 +61,6 @@ export default [
     ignores: [
       'public/**/*',
       'node_modules/**/*',
-      '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
       'webpack.config.cjs',
