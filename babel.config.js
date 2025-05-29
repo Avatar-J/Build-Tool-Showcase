@@ -1,3 +1,4 @@
-export default {
-  presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+module.exports = {
+  plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+  presets: ['@babel/preset-typescript'],
 };
