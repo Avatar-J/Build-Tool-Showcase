@@ -1,7 +1,42 @@
-const fname: string = "jummai";
+import "./style.scss";
+import * as tools from "../tools.json";
 
-console.log(`Hi! I am Jummai ${fname}`);
+const mainContainer = document.getElementById("tool-section");
+const themeSwitchBtn = document.getElementById("toggleTheme");
 
-const para = document.createElement("p");
-para.innerHTML = "show me the way senior developer";
-document.body.appendChild(para);
+function createToolElement(
+  data: { name: string; description: string },
+  element: HTMLElement
+) {
+  const listContainer = document.createElement("div");
+  listContainer.classList.add("tool-container");
+
+  const title = document.createElement("h2");
+  title.textContent = data.name;
+
+  const desc = document.createElement("p");
+  desc.textContent = data.description;
+
+  listContainer.appendChild(title);
+  listContainer.appendChild(desc);
+  element.appendChild(listContainer);
+}
+
+function displayTools(
+  data: { tools: { name: string; description: string }[] },
+  element: HTMLElement
+) {
+  data.tools.forEach((tool) => {
+    createToolElement(tool, element);
+  });
+}
+
+function addListenerToThemeSwitch(element: HTMLElement) {
+  element.addEventListener("click", () => {
+    console.log("theme");
+    document.body.classList.toggle("darkTheme");
+  });
+}
+
+displayTools(tools, mainContainer as HTMLElement);
+addListenerToThemeSwitch(themeSwitchBtn as HTMLElement);

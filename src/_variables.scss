@@ -1,0 +1,19 @@
+$font-family: helvetica;
+$base-padding: 10px;
+
+//light background
+$lg-background-color: #003566 !default;
+$lg-bg-font-color: #ffc300 !default;
+$lg-font-color: #ffc300 !default;
+$lg-theme-bg: white;
+
+//dark background
+$dark-background-color: white;
+$dark-bg-font-color: black;
+$dark-font-color: white;
+$dark-theme-bg: rgb(32, 32, 32);
+
+//header font sizes on different screens
+$header-font-size-sm: 10px;
+$header-font-size-md: 18px;
+$header-font-size-xl: 25px;
