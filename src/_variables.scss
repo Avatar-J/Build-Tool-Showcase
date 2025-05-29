@@ -1,4 +1,6 @@
-$font-family: helvetica;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-family: 'Roboto', sans-serif;
 $base-padding: 10px;
 $base-margin: 30px;
 
@@ -9,9 +11,9 @@ $lg-font-color: #ffc300 !default;
 $lg-theme-bg: white;
 
 //dark background
-$dark-background-color: white;
-$dark-bg-font-color: black;
-$dark-font-color: white;
+$dark-background-color: #ffc300;
+$dark-bg-font-color: #003566;
+$dark-font-color: #003566;
 $dark-theme-bg: rgb(32, 32, 32);
 
 //header font sizes on different screens

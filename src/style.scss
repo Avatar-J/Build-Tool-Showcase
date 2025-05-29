@@ -14,22 +14,11 @@ body {
   position: relative;
 }
 
-.darkTheme {
-  background-color: variables.$dark-theme-bg;
-}
 .wrapper {
   min-height: 100%;
   width: 100%;
   padding: 20px;
   color: variables.$lg-font-color;
-
-  @include mixins.breakpoint(768px) {
-    width: 100%;
-  }
-
-  @include mixins.breakpoint(480px) {
-    width: 100%;
-  }
 }
 
 header {
@@ -41,11 +30,12 @@ header {
   font-size: variables.$header-font-size-xl;
   color: variables.$lg-font-color;
 
+  //media queries
   @include mixins.breakpoint(480px) {
     font-size: variables.$header-font-size-sm;
   }
 
-  @include mixins.breakpoint(480px) {
+  @include mixins.breakpoint(760px) {
     font-size: variables.$header-font-size-md;
   }
 }
@@ -82,12 +72,6 @@ header {
   display: none;
 }
 
-.darkTheme .sun {
-  display: block;
-}
-.darkTheme .moon {
-  display: none;
-}
 main {
   @include mixins.centerPosition;
   width: 100%;
@@ -103,16 +87,17 @@ section {
   gap: 1.5rem;
   margin-top: 20px;
 
+  //media queries
   @include mixins.breakpoint(768px) {
-    width: 768px;
+    width: 740px;
   }
 
   @include mixins.breakpoint(600px) {
-    width: 600px;
+    width: 560px;
   }
 
   @include mixins.breakpoint(480px) {
-    width: 480px;
+    width: 440px;
   }
 }
 
@@ -129,6 +114,7 @@ section {
   @include mixins.spaceBetween;
   gap: variables.$base-padding;
 
+  //media queries
   @include mixins.breakpoint(900px) {
     width: 350px;
   }
@@ -145,11 +131,13 @@ section {
     width: 100%;
   }
 }
+
 .tool-container:hover {
   background-color: variables.$lg-bg-font-color;
   color: variables.$lg-background-color;
   transform: translateY(-5px);
 }
+
 .info {
   @include mixins.spaceBetween;
   flex-direction: column;
@@ -171,4 +159,24 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+//dark theme
+.darkTheme {
+  background-color: variables.$dark-theme-bg;
+}
+.darkTheme .sun {
+  display: block;
+}
+.darkTheme .moon {
+  display: none;
+}
+.darkTheme .tool-container {
+  color: variables.$dark-font-color;
+  background-color: variables.$dark-background-color;
+}
+
+.darkTheme .tool-container:hover {
+  background-color: variables.$dark-bg-font-color;
+  color: variables.$dark-background-color;
 }
