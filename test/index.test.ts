@@ -37,13 +37,19 @@ describe('test createToolCard', () => {
       'tool-section'
     ) as HTMLElement;
 
-    createToolElement(data, parentElement);
+    createToolElement(data, parentElement, 1);
 
     const toolContainer = parentElement.querySelector('.tool-container');
     expect(toolContainer).not.toBeNull();
 
-    const title = toolContainer?.querySelector('h2');
-    const desc = toolContainer?.querySelector('p');
+    const toolNumber = toolContainer?.querySelector('.toolNumber');
+    expect(toolNumber?.textContent).toBe('1');
+
+    const info = toolContainer?.querySelector('.info');
+    expect(info).not.toBeNull();
+
+    const title = info?.querySelector('h2');
+    const desc = info?.querySelector('p');
 
     expect(title?.textContent).toBe('Webpack');
     expect(desc?.textContent).toBe(
@@ -64,8 +70,16 @@ describe('test createToolCard', () => {
     displayTools({ tools }, parentElement);
 
     expect(createToolElementSpy).toHaveBeenCalledTimes(2);
-    expect(createToolElementSpy).toHaveBeenCalledWith(tools[0], parentElement);
-    expect(createToolElementSpy).toHaveBeenCalledWith(tools[1], parentElement);
+    expect(createToolElementSpy).toHaveBeenCalledWith(
+      tools[0],
+      parentElement,
+      1
+    );
+    expect(createToolElementSpy).toHaveBeenCalledWith(
+      tools[1],
+      parentElement,
+      2
+    );
   });
 });
 
