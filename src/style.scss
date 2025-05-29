@@ -1,5 +1,5 @@
-@use "variables";
-@use "mixins";
+@use 'variables';
+@use 'mixins';
 
 * {
   margin: 0;
@@ -124,8 +124,8 @@ section {
   width: 250px;
   height: 200px;
 }
-.darkTheme .tool-container {
-}
+// .darkTheme .tool-container {
+// }
 
 .tool-container h2 {
   margin-bottom: 0.5rem;
