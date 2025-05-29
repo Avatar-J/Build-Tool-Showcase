@@ -1,0 +1,56 @@
+{
+  "tools": [
+    {
+      "name": "ts-loader",
+      "description": "A Webpack loader that uses TypeScript's compiler to transpile .ts and .tsx files."
+    },
+    {
+      "name": "typescript",
+      "description": "A typed superset of JavaScript that compiles to plain JavaScript."
+    },
+    {
+      "name": "webpack",
+      "description": "A module bundler for JavaScript, allowing you to bundle and optimize JS, CSS, assets, etc."
+    },
+    {
+      "name": "webpack-cli",
+      "description": "Command line interface for running Webpack."
+    },
+    {
+      "name": "webpack-dev-server",
+      "description": "A development server that serves your Webpack-built app with live reloading."
+    },
+    {
+      "name": "style-loader",
+      "description": "Injects CSS into the DOM via <style> tags during development."
+    },
+    {
+      "name": "css-loader",
+      "description": "Resolves @import and url() in CSS files. Required by style-loader."
+    },
+    {
+      "name": "sass",
+      "description": "A preprocessor that compiles .scss/.sass into CSS."
+    },
+    {
+      "name": "sass-loader",
+      "description": "A Webpack loader that compiles Sass/SCSS files into CSS."
+    },
+    {
+      "name": "prettier",
+      "description": "An opinionated code formatter to ensure consistent code style."
+    },
+    {
+      "name": "jest",
+      "description": "A JavaScript testing framework by Facebook, often used with React and Node apps."
+    },
+    {
+      "name": "ts-jest",
+      "description": "A Jest transformer that allows Jest to understand TypeScript."
+    },
+    {
+      "name": "@types/jest",
+      "description": "Type definitions for Jest to support TypeScript's type checking in tests."
+    }
+  ]
+}
