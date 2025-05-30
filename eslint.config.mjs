@@ -14,7 +14,7 @@ export default [
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
-        project: true,
+        project: ['./tsconfig.json', './tsconfig.test.json'],
         tsconfigRootDir: import.meta.dirname,
       },
       globals: {
@@ -31,8 +31,8 @@ export default [
         'error',
         {
           object: 'console',
-          property: 'warn',
-          message: 'Please use a proper logging system instead of console.warn',
+          property: 'log',
+          message: 'use a proper logging system instead of console.warn',
         },
       ],
       'no-var': 'error',
@@ -54,7 +54,9 @@ export default [
     ],
     rules: {
       'no-undef': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-require-imports': 'off',
     },
   },
   {
@@ -68,6 +70,7 @@ export default [
       'webpack.dev.js',
       'webpack.prod.js',
       'jest.config.ts',
+      'babel.config.js',
     ],
   },
   prettier,

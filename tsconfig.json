@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./public/js",
-    "rootDir": "./src",
+    "rootDir": ".",
     "target": "es6",
     "strict": true,
     "module": "NodeNext",
@@ -14,6 +14,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"]
 }

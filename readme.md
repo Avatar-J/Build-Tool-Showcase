@@ -1,6 +1,6 @@
 # Build Tool Showcase
 
-A simple web app demonstrating modern build tools, written in TypeScript and SCSS. The project showcases a responsive UI, theme switching, and a dynamic list of dev dependencies.
+A simple web app demonstrating modern build tools, written in TypeScript and SCSS. The project showcases a responsive UI, theme switching, and a dynamic list of devTools.
 
 ## Features
 
@@ -10,7 +10,7 @@ A simple web app demonstrating modern build tools, written in TypeScript and SCS
 - Jest for unit testing
 - Responsive design with SCSS mixins and variables
 - Theme switcher (light/dark mode)
-- Dynamic display of dev dependencies from `package.json`
+- Dynamic display of tools from `tools.json`
 
 ## Getting Started
 
