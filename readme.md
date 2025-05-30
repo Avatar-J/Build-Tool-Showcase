@@ -54,21 +54,22 @@ npm test
 - **Sass (SCSS)**: Styles are written in SCSS and compiled to CSS as part of the build.
 - **Babel**: Ensures compatibility with a wide range of browsers by transpiling modern JavaScript.
 - **Linting**: ESLint is configured for both JavaScript and TypeScript, enforcing code quality and style. Prettier is used for consistent code formatting.
-  - Linting rules include recommended settings for JS/TS, no usage of `var`, and restrictions on `console.warn`.
-  - Certain files (e.g., build configs, test configs) are ignored by ESLint.
+  - Linting rules include recommended settings for JS/TS, no usage of `var`,restrictions on the use of `console.log`, restrictions on `console.warn`.
+  - Certain files (e.g., build configs, test configs, webpack.\*.js, jest.config.ts) are ignored by ESLint.
 - **Formatting**: Prettier is integrated to auto-format code on save or via npm scripts.
 
 ---
 
 ## Available npm Scripts
 
-| Script   | Description                                   |
-| -------- | --------------------------------------------- |
-| `serve`  | Starts the development server with hot reload |
-| `build`  | Builds the app for production                 |
-| `test`   | Runs unit tests with Jest                     |
-| `lint`   | Runs ESLint on the codebase                   |
-| `format` | Formats code using Prettier                   |
+| Script      | Description                                                                 |
+| ----------- | --------------------------------------------------------------------------- |
+| `serve`     | Starts the development server with hot reload                               |
+| `build`     | Builds the app for production                                               |
+| `test`      | Runs unit tests with Jest                                                   |
+| `lint`      | Runs ESLint on the codebase                                                 |
+| `format`    | Formats code using Prettier                                                 |
+| `precommit` | Runs ESLint on the codebase and formats code before a commit is made on git |
 
 ---
 
@@ -79,6 +80,7 @@ npm test
 - `webpack.*.js` — Webpack configuration files
 - `jest.config.ts` — Jest configuration
 - `babel.config.js` — Babel configuration
+- `test/` - test source files
 
 ## Testing
 
