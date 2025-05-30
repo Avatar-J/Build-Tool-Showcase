@@ -19,6 +19,8 @@ body {
   width: 100%;
   padding: 20px;
   color: variables.$lg-font-color;
+  margin-top: variables.$base-margin;
+  margin-bottom: variables.$base-margin;
 }
 
 header {
@@ -38,9 +40,6 @@ header {
   @include mixins.breakpoint(760px) {
     font-size: variables.$header-font-size-md;
   }
-}
-.darkTheme header {
-  color: variables.$lg-font-color;
 }
 
 .icon-container {
