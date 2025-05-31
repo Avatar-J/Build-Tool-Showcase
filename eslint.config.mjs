@@ -1,62 +1,51 @@
-import js from '@eslint/js';
+import PluginJs from '@eslint/js';
 import globals from 'globals';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import prettier from 'eslint-config-prettier';
+import PluginPrettier from 'eslint-config-prettier';
+import pluginTs from '@typescript-eslint/eslint-plugin';
+import parserTs from '@typescript-eslint/parser';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
-  js.configs.recommended,
+  PluginJs.configs.recommended,
+  PluginPrettier,
+  {
+    languageOptions: {
+      globals: { ...globals.node, ...globals.browser },
+    },
+    rules: {
+      'no-var': 'error',
+      'capitalized-comments': ['error', 'always'],
+    },
+  },
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      parser: tsParser,
+      parser: parserTs,
       parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        project: ['./tsconfig.json', './tsconfig.test.json'],
+        project: './tsconfig.json',
         tsconfigRootDir: import.meta.dirname,
+        sourceType: 'module',
       },
       globals: {
+        ...globals.node,
         ...globals.browser,
         ...globals.jest,
       },
     },
     plugins: {
-      '@typescript-eslint': tseslint,
+      '@typescript-eslint': pluginTs,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      'no-restricted-properties': [
-        'error',
-        {
-          object: 'console',
-          property: 'log',
-          message: 'use a proper logging system instead of console.warn',
-        },
-      ],
-      'no-var': 'error',
-    },
-  },
-  {
-    files: ['**/*.cjs'],
-    languageOptions: {
-      sourceType: 'commonjs',
-    },
-  },
-  {
-    files: [
-      '**/__tests__/**',
-      '**/*.test.ts',
-      '**/*.test.tsx',
-      '**/jest.setup.js',
-      '**/__mocks__/**',
-    ],
-    rules: {
-      'no-undef': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-require-imports': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_' },
+      ],
+    },
+  },
+  {
+    files: ['test/**/*.ts', 'test/**/*.tsx'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {
@@ -73,5 +62,4 @@ export default [
       'babel.config.js',
     ],
   },
-  prettier,
 ];

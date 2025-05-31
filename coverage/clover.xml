@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1748601574105" clover="3.2.0">
-  <project timestamp="1748601574105" name="All files">
+<coverage generated="1748699998953" clover="3.2.0">
+  <project timestamp="1748699998953" name="All files">
     <metrics statements="39" coveredstatements="39" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6" elements="51" coveredelements="51" complexity="0" loc="39" ncloc="39" packages="1" files="2" classes="2"/>
     <file name="index.ts" path="C:\Users\jU\Documents\GitHub\Build-Tool-Showcase\src\index.ts">
       <metrics statements="21" coveredstatements="21" conditionals="5" coveredconditionals="5" methods="5" coveredmethods="5"/>
@@ -28,24 +28,24 @@
     </file>
     <file name="utils.ts" path="C:\Users\jU\Documents\GitHub\Build-Tool-Showcase\src\utils.ts">
       <metrics statements="18" coveredstatements="18" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="6" count="19" type="stmt"/>
-      <line num="7" count="19" type="stmt"/>
-      <line num="9" count="19" type="stmt"/>
-      <line num="10" count="19" type="stmt"/>
-      <line num="12" count="19" type="stmt"/>
-      <line num="13" count="19" type="stmt"/>
-      <line num="14" count="19" type="stmt"/>
-      <line num="16" count="19" type="stmt"/>
-      <line num="17" count="19" type="stmt"/>
-      <line num="19" count="19" type="stmt"/>
-      <line num="20" count="19" type="stmt"/>
-      <line num="22" count="19" type="stmt"/>
-      <line num="23" count="19" type="stmt"/>
-      <line num="24" count="19" type="stmt"/>
-      <line num="25" count="19" type="stmt"/>
-      <line num="26" count="19" type="cond" truecount="1" falsecount="0"/>
-      <line num="27" count="2" type="stmt"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="6" count="20" type="stmt"/>
+      <line num="7" count="20" type="stmt"/>
+      <line num="9" count="20" type="stmt"/>
+      <line num="10" count="20" type="stmt"/>
+      <line num="12" count="20" type="stmt"/>
+      <line num="13" count="20" type="stmt"/>
+      <line num="14" count="20" type="stmt"/>
+      <line num="16" count="20" type="stmt"/>
+      <line num="17" count="20" type="stmt"/>
+      <line num="19" count="20" type="stmt"/>
+      <line num="20" count="20" type="stmt"/>
+      <line num="22" count="20" type="stmt"/>
+      <line num="23" count="20" type="stmt"/>
+      <line num="24" count="20" type="stmt"/>
+      <line num="25" count="20" type="stmt"/>
+      <line num="26" count="20" type="cond" truecount="1" falsecount="0"/>
+      <line num="27" count="3" type="stmt"/>
     </file>
   </project>
 </coverage>

@@ -1,19 +1,48 @@
 ### Lint Errors and Resolutions
 
-**Number of lint errors encountered:** 11
+**Number of lint errors encountered:** 48
 
 **Details and Resolutions:**
 
-1. **Parsing error for `jest.config.ts`:**
+### 1. TypeScript Parsing and Linting Improvements
 
-   - Error: `"parserOptions.project" has been provided for @typescript-eslint/parser. The file was not found in any of the provided project(s): jest.config.ts`
-   - **Resolution:** Added `jest.config.ts` to the ESLint ignore list in `eslint.config.mjs`.
+- **Issue:**  
+  ESLint was not correctly parsing TypeScript files, leading to parsing errors and missing global definitions for browser and Jest environments.
+- **Errors:**  
+  `Parsing error: Unexpected token`
+- **Resolution:**  
+  Added an override in the ESLint flat config for all TypeScript files (`**/*.ts`, `**/*.tsx`) to:
+  - Use the TypeScript parser and project settings.
+  - Enable TypeScript-specific linting rules, such as warnings for `any` and unused variables (with exceptions for variables prefixed with `_`).
+  - Added a further override for test files to allow the use of `any` without warnings.
 
-2. **'require', 'module', and '\_\_dirname' not defined in Webpack config files:**
-   - Files: `webpack.common.js`, `webpack.dev.js`, `webpack.prod.js`
-   - Errors: `'require' is not defined`, `'module' is not defined`, `'__dirname' is not defined`
-   - **Resolution:** Added all Webpack config files to the ESLint ignore list in `eslint.config.mjs`.
+### 2. Browser and Jest Globals Not Defined
 
-After updating the `ignores` array in the ESLint config to include these files, all 11 lint errors were resolved.
+- **Files:**  
+  Source files and test files using `document`, `HTMLElement`, `describe`, `test`, `expect`, etc.
+- **Errors:**  
+  `'document' is not defined`, `'HTMLElement' is not defined`, `'describe' is not defined`, etc.
+- **Resolution:**  
+  Updated the ESLint config to include `globals.browser` for source files and `globals.jest` for test files.
+
+---
+
+### 3. TypeScript Parsing Errors in Test Files
+
+- **Error:**  
+  ESLint could not parse TypeScript test files because they were not included in `tsconfig.json`.
+- **Resolution:**  
+  Updated the `include` array in `tsconfig.json` to cover both `src` and `test` directories.
+
+---
+
+### 4. Node Globals Not Defined in Webpack Config Files
+
+- **Files:**  
+  `webpack.common.js`, `webpack.dev.js`, `webpack.prod.js`
+- **Errors:**  
+  `'require' is not defined`, `'module' is not defined`, `'__dirname' is not defined`
+- **Resolution:**  
+  Added all Webpack config files to the `ignores` array in `eslint.config.mjs`.
 
 ---
