@@ -18,7 +18,7 @@ describe('test createToolElement function', () => {
 
   test('should create and append a tool element with title and description', () => {
     const parentElement = document.getElementById(
-      'tool-section'
+      'tool-section',
     ) as HTMLElement;
 
     createToolElement(data, parentElement, 1);
@@ -37,7 +37,7 @@ describe('test createToolElement function', () => {
 
     expect(title?.textContent).toBe('Webpack');
     expect(desc?.textContent).toBe(
-      'A module bundler for modern JavaScript applications.'
+      'A module bundler for modern JavaScript applications.',
     );
   });
 });

@@ -29,12 +29,12 @@ describe('test createToolCard', () => {
 
   test('should call createToolElement for each tool', () => {
     const parentElement = document.getElementById(
-      'tool-section'
+      'tool-section',
     ) as HTMLElement;
 
     const createToolElementSpy = jest.spyOn(
       require('../src/utils'),
-      'createToolElement'
+      'createToolElement',
     );
 
     displayTools({ tools }, parentElement);
@@ -43,12 +43,12 @@ describe('test createToolCard', () => {
     expect(createToolElementSpy).toHaveBeenCalledWith(
       tools[0],
       parentElement,
-      1
+      1,
     );
     expect(createToolElementSpy).toHaveBeenCalledWith(
       tools[1],
       parentElement,
-      2
+      2,
     );
   });
 });
@@ -62,7 +62,7 @@ describe('change theme', () => {
 
   test('should toggle darkTheme class on body when clicked', () => {
     const themeSwitchBtn = document.getElementById(
-      'toggleTheme'
+      'toggleTheme',
     ) as HTMLElement;
 
     addListenerToThemeSwitch(themeSwitchBtn);

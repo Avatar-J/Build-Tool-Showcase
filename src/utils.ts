@@ -1,7 +1,7 @@
 export function createToolElement(
   data: { name: string; description: string },
   element: HTMLElement,
-  index: number
+  index: number,
 ) {
   const listContainer = document.createElement('div');
   listContainer.classList.add('tool-container');

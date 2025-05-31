@@ -5,11 +5,11 @@
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.prod.js",
-    "serve": "webpack serve --config webpack.dev.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "lint": "eslint . --ext .ts,.js --cache --fix --no-warn-ignored",
     "format": "prettier --write .",
-    "precommit": "npm run lint && npm run format",
-    "prepare": "husky"
+    "check": "npm run lint && npm run format",
+    "precommit": "npm run check"
   },
   "repository": {
     "type": "git",
